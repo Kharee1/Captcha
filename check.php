@@ -1,24 +1,21 @@
 <?php
 session_start();
 
-$pause = 5;
+$pause = 3;
 
 
-if (($captcha != $_SESSION["captcha"]))
+if($_POST['captcha']!=$_SESSION['captcha'])
 	{
-		echo "Invalid captcha. Try Again. <br>";
+		echo "Invalid captcha.<br>";
 		header ("refresh: $pause; url = index.php");
 		exit();
 	}
-
-else 
-	{
-		echo "Correct captcha. Try another!"
-		header ("refresh: $pause; url = index.php");
-		exit();	
-	}
-	
-
-
-	
+ 
+if($_POST['captcha']==$_SESSION['captcha'])
+  {
+    echo "Correct captcha. Try another!<br>";
+    header("refresh: $pause; url = index.php");
+    exit();
+  }  
+  
 ?>
