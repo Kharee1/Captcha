@@ -7,7 +7,7 @@ function create_image(){
 	$randchar2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
 
 	$captcha1 = substr(str_shuffle($randchar), 0, 6);
-	$captcha2 = substr(str_shuffle($randchar2), 0, 3);
+	$captcha2 = substr(str_shuffle($randchar2), 0, 6);
 	$captcha .= $captcha1 . " " . $captcha2;
 
 
