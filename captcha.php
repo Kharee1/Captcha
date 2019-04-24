@@ -7,7 +7,7 @@ function create_image(){
 	$randchar2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnopqrstuvwxyz';
 
 	$captcha1 = substr(str_shuffle($randchar), 0, 6);
-	$captcha2 = substr(str_shuffle($randchar2), 0, 6);
+	$captcha2 = substr(str_shuffle($randchar2), 0, 3);
 	$captcha .= $captcha1 . " " . $captcha2;
 
 
@@ -18,7 +18,7 @@ function create_image(){
 	$width = 200;
 	$height = 130;
 
-	//setting height
+	//creating image
 	$pic = imagecreate($width, $height);
 
 	//seetting some colors
