@@ -18,7 +18,7 @@ session_start();
     border: 5px dashed black; }
 </style>
 
-<form action = "" method= "post">
+<form action = "check.php" method= "post">
 	<img src = "captcha.php" class = "imgframe" alt = "Captcha Image"/><br><br><br>
 	<input type = "text" name = "captcha"/>
 	<input type = "submit" value = "submit"/>
